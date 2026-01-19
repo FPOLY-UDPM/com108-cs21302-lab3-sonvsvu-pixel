@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [Nguyễn Trường Sơn]
+ * MSSV:      [PS48636]
+ * Lớp:       [COM108 - CS21302]
  *****************************************************************************/
 
 //  BÀI 2: XÂY DỰNG CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH  
@@ -21,14 +21,42 @@
 
 #include <stdio.h>
 
-int main(){
-    
-    // Khai báo biến
+int main() {
+    float a, b, c;
+    float delta;
 
+    printf("Nhap a: ");
+    scanf("%f", &a);
+    printf("Nhap b: ");
+    scanf("%f", &b);
+    printf("Nhap c: ");
+    scanf("%f", &c);
 
-    // Nhập dữ liệu
+    if (a == 0) {
+        // Phuong trinh bac 1
+        if (b == 0) {
+            if (c == 0)
+                printf("Phuong trinh co vo so nghiem\n");
+            else
+                printf("Phuong trinh vo nghiem\n");
+        } else {
+            printf("Phuong trinh co nghiem: x = %f\n", -c / b);
+        }
+    } else {
+        // Phuong trinh bac 2
+        delta = b*b - 4*a*c;
 
+        if (delta < 0) {
+            printf("Phuong trinh vo nghiem\n");
+        }
+        else if (delta == 0) {
+            printf("Phuong trinh co nghiem kep: x = %f\n", -b / (2*a));
+        }
+        else {
+            printf("Phuong trinh co 2 nghiem phan biet\n");
+            printf("(Chua hoc can bac hai nen khong tinh cu the)\n");
+        }
+    }
 
-    // Xử lý, tính toán VÀ Hiển thị kết quả
-
+    return 0;
 }
